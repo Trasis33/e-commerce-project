@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@imaginary-cloud/eslint-config-react": "^1.0.1",
+    "babel-eslint": "^10.1.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
@@ -43,7 +44,12 @@
     "prettier": "^2.0.5"
   },
   "eslintConfig": {
-    "extends": "@imaginary-cloud/react"
+    "extends": "@imaginary-cloud/react",
+    "ecmaFeatures": {
+      "arrowFunctions": true,
+      "jsx": true
+    },
+    "parser": "babel-eslint"
   },
   "prettier": "@imaginary-cloud/prettier-config"
 }
