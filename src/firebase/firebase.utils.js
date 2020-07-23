@@ -13,7 +13,7 @@ const config = {
   measurementId: 'G-PKCKJWJZ5B',
 }
 
-export const CreateUserDocument = async (userAuth, additionalData) => {
+export const createUserDocument = async (userAuth, additionalData) => {
   if (!userAuth) {
     return
   }
