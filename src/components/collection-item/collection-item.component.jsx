@@ -16,7 +16,7 @@ const CollectionItem = ({ id, name, price, imageUrl }) => (
 CollectionItem.propTypes = {
   id: propTypes.number,
   name: propTypes.string,
-  price: propTypes.string,
+  price: propTypes.number,
   imageUrl: propTypes.string,
 }
 
