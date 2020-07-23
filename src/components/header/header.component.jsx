@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react'
 import propTypes from 'prop-types'
 import { Link } from 'react-router-dom'
@@ -23,16 +24,11 @@ const Header = ({ currentUser }) => (
       </Link>
       {currentUser ? (
         // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-        <div
-          className="option"
-          role="link"
-          tabIndex="0"
-          onClick={() => auth.signOut()}
-        >
+        <div className="option" onClick={() => auth.signOut()}>
           SIGN OUT
         </div>
       ) : (
-        <Link className="option" to="/signIn">
+        <Link className="option" to="/signin">
           SIGN IN
         </Link>
       )}
