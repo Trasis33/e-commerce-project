@@ -3,10 +3,17 @@ import propTypes from 'prop-types'
 
 import './custom-button.styles.scss'
 
-const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => (
+const CustomButton = ({
+  children,
+  isGoogleSignIn,
+  inverted,
+  ...otherProps
+}) => (
   // eslint-disable-next-line react/button-has-type
   <button
-    className={`${isGoogleSignIn ? 'google-sign-in' : ''} custom-button`}
+    className={`${inverted ? 'inverted' : ''} ${
+      isGoogleSignIn ? 'google-sign-in' : ''
+    } custom-button`}
     {...otherProps}
   >
     {children}
@@ -16,6 +23,7 @@ const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => (
 CustomButton.propTypes = {
   children: propTypes.any,
   isGoogleSignIn: propTypes.bool,
+  inverted: propTypes.bool,
 }
 
 export default CustomButton
