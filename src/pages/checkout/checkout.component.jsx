@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
@@ -34,6 +35,11 @@ const CheckoutPage = ({ cartItems, total }) => (
     </div>
   </div>
 )
+
+CheckoutPage.propTypes = {
+  cartItems: propTypes.array,
+  total: propTypes.number,
+}
 
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems,
